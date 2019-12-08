@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,246 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Snake_and_Ladder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDu-C5-5rW" userLabel="Top View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="e7j-A2-eQM">
+                                        <rect key="frame" x="0.0" y="41" width="414" height="163.5"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="e7j-A2-eQM" secondAttribute="bottom" id="Q8I-y5-dNj"/>
+                                    <constraint firstItem="e7j-A2-eQM" firstAttribute="height" secondItem="TDu-C5-5rW" secondAttribute="height" multiplier="0.8" id="QvA-gc-EIo"/>
+                                    <constraint firstItem="e7j-A2-eQM" firstAttribute="leading" secondItem="TDu-C5-5rW" secondAttribute="leading" id="cQM-Hx-wgg"/>
+                                    <constraint firstAttribute="trailing" secondItem="e7j-A2-eQM" secondAttribute="trailing" id="vqX-AJ-2kb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgl-XQ-r2I">
+                                <rect key="frame" x="0.0" y="224.5" width="414" height="450"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snake-and-Ladder-Example" translatesAutoresizingMaskIntoConstraints="NO" id="30l-Wk-NXx">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="30l-Wk-NXx" secondAttribute="trailing" id="RbP-4k-X8m"/>
+                                    <constraint firstAttribute="bottom" secondItem="30l-Wk-NXx" secondAttribute="bottom" id="VZ6-3U-jya"/>
+                                    <constraint firstItem="30l-Wk-NXx" firstAttribute="top" secondItem="rgl-XQ-r2I" secondAttribute="top" id="uqj-0S-EOr"/>
+                                    <constraint firstItem="30l-Wk-NXx" firstAttribute="leading" secondItem="rgl-XQ-r2I" secondAttribute="leading" id="vq0-BV-1rR"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KZx-m3-lxi">
+                                <rect key="frame" x="0.0" y="224.5" width="414" height="450"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tvz-kM-Fvh">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2U7-7x-N4s">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-K0-7zb">
+                                                <rect key="frame" x="69" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rqg-E7-ykf">
+                                                <rect key="frame" x="138" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2uN-ZL-ter">
+                                                <rect key="frame" x="207" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Om-WA-M3i">
+                                                <rect key="frame" x="276" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cuG-cu-CKk">
+                                                <rect key="frame" x="345" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IIv-gD-xXY">
+                                        <rect key="frame" x="0.0" y="75" width="414" height="75"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YBK-MB-sex">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QuS-EV-17C">
+                                                <rect key="frame" x="69" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uYC-Vr-H4U">
+                                                <rect key="frame" x="138" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yvK-BR-yUV">
+                                                <rect key="frame" x="207" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dBL-Hp-q2U">
+                                                <rect key="frame" x="276" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LSx-Hz-FGL">
+                                                <rect key="frame" x="345" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CJ4-7Q-eSN">
+                                        <rect key="frame" x="0.0" y="150" width="414" height="75"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-aW-7Pk">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Np-K2-0gT">
+                                                <rect key="frame" x="69" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zTg-eV-D5n">
+                                                <rect key="frame" x="138" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q2n-RL-0vt">
+                                                <rect key="frame" x="207" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U7b-Ta-1lr">
+                                                <rect key="frame" x="276" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gMc-mQ-TbK">
+                                                <rect key="frame" x="345" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aSD-Rt-D1m">
+                                        <rect key="frame" x="0.0" y="225" width="414" height="75"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qng-y4-AFT">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kW2-jT-ABQ">
+                                                <rect key="frame" x="69" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YN4-Jf-Ya2">
+                                                <rect key="frame" x="138" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="grA-E3-RaE">
+                                                <rect key="frame" x="207" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qdo-ha-yfy">
+                                                <rect key="frame" x="276" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4FV-6U-Kwc">
+                                                <rect key="frame" x="345" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6yS-HD-MO6">
+                                        <rect key="frame" x="0.0" y="300" width="414" height="75"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yok-tF-QHh">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Kr-fP-5zT">
+                                                <rect key="frame" x="69" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FKs-sb-6AZ">
+                                                <rect key="frame" x="138" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4rz-OL-SOi">
+                                                <rect key="frame" x="207" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g1G-PT-TVj">
+                                                <rect key="frame" x="276" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h8o-5N-yWY">
+                                                <rect key="frame" x="345" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bsa-7j-ahR">
+                                        <rect key="frame" x="0.0" y="375" width="414" height="75"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eSl-5Q-WMh">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-NN-HN7">
+                                                <rect key="frame" x="69" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FNM-eU-hHv">
+                                                <rect key="frame" x="138" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7xi-Ks-663">
+                                                <rect key="frame" x="207" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YFK-Sp-RV6">
+                                                <rect key="frame" x="276" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4f-0a-KDk">
+                                                <rect key="frame" x="345" y="0.0" width="69" height="75"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23413488476645636" green="0.27035691755682134" blue="0.4045296308290155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KZx-m3-lxi" secondAttribute="trailing" id="693-Uq-J1k"/>
+                            <constraint firstAttribute="trailing" secondItem="TDu-C5-5rW" secondAttribute="trailing" id="AyO-KI-ipL"/>
+                            <constraint firstAttribute="trailing" secondItem="rgl-XQ-r2I" secondAttribute="trailing" id="DY5-8n-Nw4"/>
+                            <constraint firstItem="KZx-m3-lxi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tya-d3-Ute"/>
+                            <constraint firstItem="KZx-m3-lxi" firstAttribute="top" secondItem="TDu-C5-5rW" secondAttribute="bottom" constant="20" id="Zwa-eF-ay5"/>
+                            <constraint firstItem="KZx-m3-lxi" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.55" id="bbD-Nt-4tc"/>
+                            <constraint firstItem="rgl-XQ-r2I" firstAttribute="top" secondItem="TDu-C5-5rW" secondAttribute="bottom" constant="20" id="elx-bV-057"/>
+                            <constraint firstItem="TDu-C5-5rW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gbJ-36-GK8"/>
+                            <constraint firstItem="rgl-XQ-r2I" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.55" id="hjR-7n-SS9"/>
+                            <constraint firstItem="rgl-XQ-r2I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kRR-t5-D4w"/>
+                            <constraint firstItem="TDu-C5-5rW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mcc-vX-H3n"/>
+                            <constraint firstItem="TDu-C5-5rW" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.25" id="zfJ-nX-SPB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="Img1" destination="eSl-5Q-WMh" id="bXh-6P-nN8"/>
+                        <outlet property="Img10" destination="FKs-sb-6AZ" id="4yj-cB-MfR"/>
+                        <outlet property="Img11" destination="8Kr-fP-5zT" id="0n8-EA-R3L"/>
+                        <outlet property="Img12" destination="Yok-tF-QHh" id="awA-dV-QFa"/>
+                        <outlet property="Img13" destination="Qng-y4-AFT" id="QqD-qf-Vze"/>
+                        <outlet property="Img14" destination="kW2-jT-ABQ" id="TX2-9G-3a1"/>
+                        <outlet property="Img15" destination="YN4-Jf-Ya2" id="cpA-qX-zWv"/>
+                        <outlet property="Img16" destination="grA-E3-RaE" id="v5M-zL-XFT"/>
+                        <outlet property="Img17" destination="qdo-ha-yfy" id="x1H-T1-kl4"/>
+                        <outlet property="Img18" destination="4FV-6U-Kwc" id="a4s-M6-SCq"/>
+                        <outlet property="Img19" destination="gMc-mQ-TbK" id="fBb-BX-RPh"/>
+                        <outlet property="Img2" destination="Vbe-NN-HN7" id="ztE-kT-7oF"/>
+                        <outlet property="Img20" destination="U7b-Ta-1lr" id="93f-ax-fVp"/>
+                        <outlet property="Img21" destination="Q2n-RL-0vt" id="wUv-4Z-cfW"/>
+                        <outlet property="Img22" destination="zTg-eV-D5n" id="cNK-L2-Nmn"/>
+                        <outlet property="Img23" destination="9Np-K2-0gT" id="tkC-Z7-5nB"/>
+                        <outlet property="Img24" destination="ygg-aW-7Pk" id="2sL-bo-dOr"/>
+                        <outlet property="Img25" destination="YBK-MB-sex" id="ppD-Kl-hPf"/>
+                        <outlet property="Img26" destination="QuS-EV-17C" id="QxB-ku-nlm"/>
+                        <outlet property="Img27" destination="uYC-Vr-H4U" id="DXt-T0-i6K"/>
+                        <outlet property="Img28" destination="yvK-BR-yUV" id="9by-VC-sax"/>
+                        <outlet property="Img29" destination="dBL-Hp-q2U" id="iK3-yL-zfY"/>
+                        <outlet property="Img3" destination="FNM-eU-hHv" id="eLd-1g-sLV"/>
+                        <outlet property="Img30" destination="LSx-Hz-FGL" id="qAG-fT-iuX"/>
+                        <outlet property="Img31" destination="cuG-cu-CKk" id="yVY-0y-Zge"/>
+                        <outlet property="Img32" destination="3Om-WA-M3i" id="HHH-Id-F8s"/>
+                        <outlet property="Img33" destination="2uN-ZL-ter" id="8CN-Gq-rM9"/>
+                        <outlet property="Img34" destination="Rqg-E7-ykf" id="5gM-3j-OoY"/>
+                        <outlet property="Img35" destination="Xch-K0-7zb" id="EIX-Cg-Vdy"/>
+                        <outlet property="Img36" destination="2U7-7x-N4s" id="yUb-oA-zKF"/>
+                        <outlet property="Img4" destination="7xi-Ks-663" id="Zbi-5L-e2S"/>
+                        <outlet property="Img5" destination="YFK-Sp-RV6" id="0os-Br-dtL"/>
+                        <outlet property="Img6" destination="h4f-0a-KDk" id="WrA-Na-MbL"/>
+                        <outlet property="Img7" destination="h8o-5N-yWY" id="P2j-yw-1se"/>
+                        <outlet property="Img8" destination="g1G-PT-TVj" id="01t-YZ-buk"/>
+                        <outlet property="Img9" destination="4rz-OL-SOi" id="P01-jT-wMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="375" height="207"/>
+        <image name="Snake-and-Ladder-Example" width="607" height="531"/>
+    </resources>
 </document>
