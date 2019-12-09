@@ -116,7 +116,7 @@ class ViewController: UIViewController {
         setImage()
             score += rollValue
         //for Snake
-        if score == 8{
+        if score == 11{
             score = 3
         }else if score == 23{
             score = 16
